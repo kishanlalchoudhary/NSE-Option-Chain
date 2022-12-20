@@ -1,0 +1,112 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block navbar %}
+
+<header id="full_nav" class="sticky-top">
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{{ url_for('static', filename='Images/NSE_Logo.svg') }}"
+            class="nav_logo"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-sharp fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown me-lg-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select
+              </a>
+              <ul
+                class="dropdown-menu"
+                id="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="/nifty">Nifty</a></li>
+                <li><a class="dropdown-item" href="/finnifty">FinNifty</a></li>
+                <li>
+                  <a class="dropdown-item" href="/banknifty">BankNifty</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+{% endblock %} {% block content %}
+
+<!-- About Page CSS starts -->
+
+<div class="container-fluid aboutUSLanding">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xl-7 col-12 about-image my-sm-5 my-2">
+        <img
+          src="{{ url_for('static', filename='Images/Landing.jpg') }}"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+      <div class="col-xl-5 col-12 about-content">
+        <p>
+          Powered by millions of dreams, hopes and aspirations, India today is
+          brimming with potential. At NSE, we are driven by this ambition that
+          makes India charge ahead and take a more prominent place on the global
+          stage.
+        </p>
+        <!-- <br> -->
+        <p>
+          We aim to catalyze India's growth story by creating investment
+          opportunities, enabling access and empowering our stakeholders. We
+          work harder, smarter and faster to deliver impact across the
+          investment ecosystem. In a world that changes shape by the second, we
+          constantly reinvent ourselves to redefine the future.
+        </p>
+        <!-- <br> -->
+        <p>
+          Our ambition gives us direction. It pivots, and propels us. It is the
+          leap we take from today, towards a brighter tomorrow.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Page CSS ends -->
+
+{% endblock %} {% block footer %}
+
+<!-- Footer section starts -->
+
+<section class="footer">Copyright &copy Kishanlal</section>
+
+<!-- Footer section ends -->
+
+{% endblock %}

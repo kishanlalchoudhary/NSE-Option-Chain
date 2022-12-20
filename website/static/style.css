@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar css starts */
+
+.header{
+    background-color:  #fed362;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.nav_logo{
+    height: 8vh;
+    margin: 5px;
+}
+
+.nav-item{
+    margin: 0px 20px;
+}
+
+.navbar-light .navbar-toggler {
+    height: 8vh;
+    color: #80808b;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+#navbarSupportedContent ul li a{
+    color: #2b2f33;
+    font-weight: 700;
+    position: relative;
+    font-size: 18px;
+    padding: 3px 15px;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0%;
+    height: 4px;
+    background-color: #80808b;
+    transition: all 0.5s linear;
+}
+
+.active::before{
+    width: 100%;
+}
+.active{
+    color: #80808b;
+}
+
+.nav-link:hover::before{
+    width: 100%;
+    background-color: #80808b;
+}
+
+.header .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    margin-right: 10px;
+}
+
+.dropdown-menu{
+    background-color: #a9a9a9;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.navbar-nav .dropdown-menu{
+    margin-top: 15px;
+}
+
+#dropdown-menu{
+    left: -28px;
+}
+
+/* Navbar css ends */
+
+/* Login page css starts */
+
+.main-login{
+    background-color: #fed362;
+    align-items: center;
+    height: 100vh;
+}
+
+.login{
+    height: 100vh;
+}
+
+label {
+    text-align: center;
+}
+
+.login .logo img{
+    width: 80%;
+    margin: 20px;
+}
+
+.login input{
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5e6278;
+}
+
+.login input:focus{
+    box-shadow: none;
+}
+
+.login .submit_btn{
+    padding: 15px;
+    font-weight: 500;
+}
+
+.login .submit_btn{
+    box-shadow: none;
+}
+
+.login .password-info{
+    font-size: 10px;
+}
+
+.alert{
+    margin-bottom: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+/* Login page css ends */
+
+/* Table CSS starts */
+
+.content{
+    overflow-x: auto;
+    background-color: rgba(222,214,162,0.41);
+}
+
+table{
+    width: 1400px;
+    overflow-x: auto;
+    font-size: 0.7rem;
+    text-align: center;
+    border: 1px solid #ececec;
+    margin: 10px auto;
+}
+
+th{
+    background-color: #3a2d7d;
+    color: #fff;
+    border: 1px solid #ececec;
+    width: 4.76%;
+    text-align: center;
+}
+
+td{
+    border: 1px solid #ececec;
+    text-align: center;
+}
+
+.calls{
+    background-color: rgba(222,214,162,0.41);
+}
+
+.puts{
+    background-color: #fff;
+}
+
+/* Table CSS ends */
+
+/* About section CSS */
+
+.about-image{
+    display: flex;
+    align-items: center;
+    height: 67vh;
+}
+
+.about-image img{
+    width: 100%;
+}
+
+.about-content p{
+    font-size: larger;
+}
+
+/* About us css ends */
+
+/* Footer Css starts */
+
+.footer{
+    background-color: #2b2f33;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Footer Css ends */
+
+/* Responsive CSS starts */
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .about-image{
+        width: 70vw;
+        height: 60vh;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .nav-link::before{
+        left: 0;
+    }
+    .nav-link:hover::before{
+        width: 0;
+    }
+    .active::before{
+        width: 0;
+    }
+    .about-image{
+        width: 80vw;
+        height: 50vh;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .about-image{
+        height: 40vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link::before{
+        left: 0;
+    }
+    .nav-link:hover::before{
+        width: 0;
+    }
+    .active::before{
+        width: 0;
+    }
+    .main-login{
+        padding: 0;
+    }
+    .section-p1{
+        padding: 40px 30px;
+        padding-bottom: 0px;
+    }
+    .about-image{
+        width: 100vw;
+        height: 50vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-image{
+        height: 35vh;
+    }
+}
+
+/* Responsive CSS */

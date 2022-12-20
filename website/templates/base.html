@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}NSE{% endblock %}</title>
+
+    <!-- Bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 5 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Css file link -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+
+    {% block navbar %} {% endblock %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %} {% for
+    category, message in messages %} {% if category == 'error' %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container-fluid content">
+
+      {% block content %}
+
+      <!-- About Page CSS starts -->
+
+      <div class="container-fluid aboutUSLanding">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-12 about-image my-sm-5 my-2">
+              <img src="Images\about-us.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-7 col-12 about-content my-4">
+              <!-- <h1 class="text-uppercase fw-bolder fs-1">About Us</h1> -->
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Page CSS ends -->
+
+      {% endblock %}
+
+    </div>
+
+    {% block footer %} {% endblock %}
+
+    <!-- Boostrap Script link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+    
+  </body>
+</html>

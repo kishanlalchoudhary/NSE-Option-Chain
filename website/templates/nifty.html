@@ -1,0 +1,118 @@
+{% extends "base.html" %} {% block title %}Nifty{% endblock %} {% block footer
+%}
+
+<!-- Footer section starts -->
+
+<section class="footer">Copyright &copy Kishanlal</section>
+
+<!-- Footer section ends -->
+
+{% endblock %} {% block navbar %}
+
+<header id="full_nav" class="sticky-top">
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid px-3">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{{ url_for('static', filename='Images/NSE_Logo.svg') }}"
+            class="nav_logo"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-sharp fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown me-lg-3">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Nifty
+              </a>
+              <ul
+                class="dropdown-menu"
+                id="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="/nifty">Nifty</a></li>
+                <li><a class="dropdown-item" href="/finnifty">FinNifty</a></li>
+                <li>
+                  <a class="dropdown-item" href="/banknifty">BankNifty</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+{% endblock %} {% block content %}
+
+<table>
+  <thead>
+    <tr style="text-align: center">
+      <th colspan="10">CALLS</th>
+      <th colspan="21">PUTS</th>
+    </tr>
+    <tr style="text-align: right">
+      <th>OI</th>
+      <th>CHNG IN OI</th>
+      <th>VOLUME</th>
+      <th>IV</th>
+      <th>LTP</th>
+      <th>CHNG</th>
+      <th>BID QTY</th>
+      <th>BID</th>
+      <th>ASK</th>
+      <th>ASK QTY</th>
+      <th>STRIKE</th>
+      <th>BID QTY</th>
+      <th>BID</th>
+      <th>ASK</th>
+      <th>ASK QTY</th>
+      <th>CHNG</th>
+      <th>LTP</th>
+      <th>IV</th>
+      <th>VOLUME</th>
+      <th>CHNG IN OI</th>
+      <th>OI</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(length) %}
+    <tr>
+      {% for j in range(10) %}
+      <td class="calls">{{ data[i][j] }}</td>
+      {% endfor %}
+      {% for k in range(10,21) %}
+      <td class="puts">{{ data[i][k] }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

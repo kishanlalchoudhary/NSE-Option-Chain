@@ -1,0 +1,84 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+
+<!-- Signup page starts -->
+
+<div class="container-fluid main-login">
+  <div class="wrapper login d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div
+        class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-lg-4 text-center"
+      >
+        <form method="POST" class="rounded bg-white shadow px-sm-5 p-3">
+          <div class="logo">
+            <img
+              src="{{ url_for('static', filename='Images/NSE_Logo.svg') }}"
+              alt="logo"
+            />
+          </div>
+          <h3 class="text-dark fw-bolder fs-4 mb-2">Create an Account</h3>
+          <div class="fw-normal text-muted mb-4">
+            Already have an account?<a
+              class="text-primary text-decoration-none fw-bold"
+              href="/login"
+            >
+              Login here
+            </a>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingEmail"
+              name="email"
+              placeholder="name@example.com"
+            />
+            <label for="floatingEmail">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingFirstName"
+              name="firstName"
+              placeholder="name@example.com"
+            />
+            <label for="floatingFirstName">Enter First Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword1"
+              name="password1"
+              placeholder="Password"
+            />
+            <label for="floatingPassword1">Password</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword2"
+              name="password2"
+              placeholder="Password"
+            />
+            <label for="floatingPassword2">Confirm Password</label>
+          </div>
+          <div class="mt-2 text-end">
+            <a class="text-primary fw-bold text-decoration-none"
+              >Forgot Password?</a
+            >
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn w-100 my-4">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup page ends  -->
+
+{% endblock %}
