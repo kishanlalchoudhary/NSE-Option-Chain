@@ -19,3 +19,26 @@
 ## Data Page
 
 ![Screenshot (124)](https://user-images.githubusercontent.com/107745828/208607727-04f573a4-ae99-4e7d-b748-a6b5bed254b9.png)
+
+
+## Setup & Installtion
+
+Make sure you have the latest version of Python installed.
+
+```bash
+git clone <repo-url>
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running The App
+
+```bash
+python main.py
+```
+
+## Viewing The App
+
+Go to `http://127.0.0.1:5000`
