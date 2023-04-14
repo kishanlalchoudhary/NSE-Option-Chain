@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 flask-login
 requests
 waitress
+gunicorn
