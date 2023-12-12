@@ -28,7 +28,7 @@ A responsive website with login/signup authentication, powered by Flask, that re
 Make sure you have the latest version of Python installed.
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/kishanlalchoudhary/NSE-Option-chain.git
 ```
 
 ```bash
