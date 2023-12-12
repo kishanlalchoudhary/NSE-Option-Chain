@@ -1,4 +1,4 @@
-# NSE-Option-chain
+# NSE Option Chain
 A responsive website with login/signup authentication, powered by Flask, that retrieves and displays NSE Option Chain data for users to analyze and make informed financial decisions.
 
 ## Features
