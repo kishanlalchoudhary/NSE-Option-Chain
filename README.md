@@ -44,3 +44,27 @@ python main.py
 ## Viewing The App
 
 Go to `http://127.0.0.1:5000`
+
+## API Reference
+
+```
+  https://www.nseindia.com/option-chain
+```
+
+#### Nifty Option Chain Data Endpoint
+
+```
+  https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY
+```
+
+#### Finifty Option Chain Data Endpoint
+
+```
+  https://www.nseindia.com/api/option-chain-indices?symbol=FINNIFTY
+```
+
+#### Banknifty Option Chain Data Endpoint
+
+```
+  https://www.nseindia.com/api/option-chain-indices?symbol=BANKNIFTY
+```
